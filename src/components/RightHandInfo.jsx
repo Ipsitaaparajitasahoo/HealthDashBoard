@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Css/RightData.css';
+import '../Css/RightHandInfo.css';
 import UpcomingSchedule from './UpcomingSchedule';
 
 const RightHandInfo = () => {

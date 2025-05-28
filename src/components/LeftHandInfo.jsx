@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Css/Dash.css';
+import '../Css/LeftHandInfo.css';
 import Img1 from "../assets/body.avif"
 import ActivityChart from './ActivityChart';
 import { activityData, healthStats } from '../data/healthData';

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Css/Activity.css';
+import '../Css/ActivityChart.css';
 import { activityData, days } from '../data/activityData';
 
 const ActivityChart = () => {
