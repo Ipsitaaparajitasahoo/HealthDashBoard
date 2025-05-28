@@ -1,0 +1,194 @@
+.dashboard-container {
+    font-family: sans-serif;
+    background-color: #f9faff;
+    width: 45vw;
+    border-radius: 12px;
+}
+
+.head {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 4px;
+}
+
+.calendar-section {
+    background: #fff;
+    border-radius: 16px;
+    /* padding: 20px; */
+    margin-bottom: 30px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.date {
+    font-size: 12px;
+    color: #3663cb;
+    font-weight: 600;
+}
+
+.calendar-controls button {
+    margin: 0 5px;
+    background-color: #4c7ef3;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.calendar-grid {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.calendar-day {
+    text-align: center;
+    font-size: 12px;
+}
+
+.calendar-dates {
+    background: #f1f5f9;
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 5px;
+}
+
+.calendar-times span {
+    display: block;
+    font-size: 10px;
+    margin: 2px 0;
+}
+
+.appointments {
+    display: flex;
+    width: 100%;
+    gap: 12px;
+    margin-top: 12px;
+    /* border-radius: 40px; */
+}
+
+.appointment-card {
+    width: 100%;
+    background-color: #e0e7ff;
+    border-radius: 12px;
+    padding: 4px 8px;
+}
+
+.appointment-card.dentist {
+    background-color: #c7d2fe;
+    width: 40%;
+}
+
+.appointment-card.physio {
+    background-color: #dbeafe;
+    width: 60%;
+}
+
+.upcoming-section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.upcoming-group {
+    margin-bottom: 20px;
+}
+
+.upcoming-cards {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.upcoming-card {
+    flex: 1 1 45%;
+    background-color: #f3f4f6;
+    border-radius: 12px;
+    padding: 10px;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.avatar-button {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.emoji-button {
+    background-color: #0cd7da;
+    color: #fff;
+}
+
+.plus-button {
+    background-color: #4c37f3;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        width: 90vw;
+        margin: 0 auto;
+    }
+
+    .calendar-grid {
+        flex-wrap: wrap;
+    }
+
+    .calendar-day {
+        flex: 1 1 30%;
+    }
+
+    .appointments {
+        flex-direction: column;
+    }
+
+    .appointment-card.dentist,
+    .appointment-card.physio {
+        flex: 1 1 100%;
+    }
+
+    .upcoming-card {
+        flex: 1 1 100%;
+    }
+}
+
+/* Mobile (≤ 480px) */
+@media (max-width: 480px) {
+    .dashboard-container {
+        width: 95vw;
+        padding: 10px;
+    }
+
+    .calendar-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .calendar-day {
+        flex: 1 1 45%;
+    }
+
+    .head {
+        justify-content: center;
+    }
+
+    .upcoming-card {
+        flex: 1 1 100%;
+    }
+}

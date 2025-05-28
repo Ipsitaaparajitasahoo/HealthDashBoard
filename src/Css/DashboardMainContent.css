@@ -1,0 +1,37 @@
+.responsive-container {
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .responsive-container > * {
+    flex: 1 1 45%; 
+  }
+  
+  /* Tablet (≤ 768px) */
+  @media (max-width: 768px) {
+    .responsive-container {
+      justify-content: center;
+    }
+  
+    .responsive-container > * {
+      flex: 1 1 100%; 
+      max-width: 500px;
+    }
+  }
+  
+  /* Mobile (≤ 480px) */
+  @media (max-width: 480px) {
+    .responsive-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .responsive-container > * {
+      flex: 1 1 100%;
+      width: 100%;
+    }
+  }
+  

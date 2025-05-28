@@ -1,0 +1,87 @@
+.sidebar {
+  width: 10vw;
+  background-color: rgb(213, 180, 176);
+  padding: 20px;
+  min-height: 100vh;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+/* Hamburger button, hidden by default */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1100;
+  color: #333;
+}
+
+.sidebar-title {
+  color: #4c7ef3;
+  cursor: pointer;
+  /* Indicates clickable for closing */
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-item {
+  margin: 15px 0;
+  color: #333;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+/* Large screens: sidebar always visible */
+@media (min-width: 769px) {
+  .sidebar {
+    width: 200px;
+    /* fixed width on desktop */
+    transform: translateX(0);
+    position: relative;
+    box-shadow: none;
+  }
+}
+
+/* Small screens: hidden sidebar + overlay */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60vw;
+    max-width: 250px;
+    height: 100%;
+    background-color: rgb(213, 180, 176);
+    transform: translateX(-100%);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.4);
+  }
+
+  .sidebar.show {
+    transform: translateX(0);
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  /* Overlay when sidebar is open */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 900;
+    display: block;
+  }
+}

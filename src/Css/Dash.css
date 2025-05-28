@@ -1,0 +1,196 @@
+.dashboard {
+  width:45vw;
+  margin: 0px 8px ;
+  font-family: Arial, sans-serif;
+  padding: 4px;
+  background-color: #F3F3F3;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.dashboard-header input {
+  width: 200px;
+  padding: 6px 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+.notification-icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+h2 {
+  margin: 20px 0;
+}
+
+.dashboard-content {
+  display: flex;
+  gap: 14px;
+}
+
+.body-section {
+  position: relative;
+  width: 60%;
+  background: #13131b;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.body-image {
+  width: 100%;
+  max-width: 250px;
+}
+
+.label {
+  position: absolute;
+  background: #4b6fff;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.label.heart {
+  top: 40%;
+  right: -10px;
+}
+
+.label.leg {
+  bottom: 20%;
+  left: -10px;
+  background: #06b6d4;
+}
+
+.health-cards {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.health-card {
+  background: #f9faff;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  font-size: 24px;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.date {
+  font-size: 8px;
+  color: #555;
+}
+
+.progress-bar {
+  background: #e5e7eb;
+  border-radius: 10px;
+  height: 8px;
+  margin-top: 8px;
+}
+
+.progress {
+  height: 100%;
+  border-radius: 10px;
+}
+
+.activity-section {
+  margin-top: 8px;
+  display: flex;
+}
+
+.activity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.activity-chart {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.bar {
+  width: 10px;
+  background: #4b6fff;
+  border-radius: 4px;
+}
+
+.dash-text {
+  font-size: 16px;
+  color: rgb(6, 72, 113);
+  font-weight: 400;
+}
+
+/* Tablet (≤ 768px) */
+@media (max-width: 768px) {
+  .dashboard {
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .dashboard-content {
+    flex-direction: column;
+  }
+
+  .body-section, .health-cards {
+    width: 100%;
+  }
+
+  .dashboard-header input {
+    width: 100%;
+  }
+}
+
+/* Mobile (≤ 480px) */
+@media (max-width: 480px) {
+  .dashboard {
+    width: 95vw;
+    padding: 8px;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dashboard-header input {
+    width: 100%;
+  }
+
+  .body-section, .health-cards {
+    width: 100%;
+  }
+
+  .dash-text {
+    font-size: 14px;
+  }
+
+  .icon {
+    font-size: 20px;
+  }
+
+  .date {
+    font-size: 10px;
+  }
+}
